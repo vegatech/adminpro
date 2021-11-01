@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//Modulos
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { PagesModule } from './pages/pages.module';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { NopagefoundComponent } from './pages/nopagefound/nopagefound.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { Graficas1Component } from './pages/graficas1/graficas1.component';
-import { AppRoutingModule } from './app-routing.module';
-import { PagesComponent } from './pages/pages.component';
+
+import { SharedModule } from './shared/shared.module';
+
 
 
 @NgModule({
@@ -20,18 +18,13 @@ import { PagesComponent } from './pages/pages.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    NopagefoundComponent,
-    DashboardComponent,
-    BreadcrumbsComponent,
-    SidebarComponent,
-    HeaderComponent,
-    ProgressComponent,
-    Graficas1Component,
-    PagesComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
