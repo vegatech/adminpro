@@ -6,25 +6,24 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { PagesModule } from './pages/pages.module';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-
 import { SharedModule } from './shared/shared.module';
+import { AuthModule } from './auth/auth.module';
+import { NopagefoundComponent } from './pages/nopagefound/nopagefound.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
+    NopagefoundComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    PagesModule
+    PagesModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
