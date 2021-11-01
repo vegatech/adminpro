@@ -5,8 +5,9 @@ import { RegisterComponent } from './auth/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { Graficas1Component } from './pages/graficas1/graficas1.component';
 import { ProgressComponent } from './pages/progress/progress.component';
-import { NopagefoundComponent } from './pages/nopagefound/nopagefound.component';
+
 import { PagesComponent } from './pages/pages.component';
+import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
 
 
