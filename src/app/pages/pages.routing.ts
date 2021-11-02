@@ -7,17 +7,15 @@ import { PagesComponent } from './pages.component';
 
 
 const routes: Routes = [
-
-  { path: 'dashboard',
-  component: PagesComponent,
-  children :[
-    { path: '', component: DashboardComponent},
-    { path: 'progress', component: ProgressComponent},
-    { path: 'graficas1', component: Graficas1Component},
-
-  ]
-},
-
+    {
+        path: 'dashboard',
+        component: PagesComponent,
+        children :[
+      { path: '', component: DashboardComponent},
+      { path: 'progress', component: ProgressComponent},
+      { path: 'graficas1', component: Graficas1Component},
+    ]
+  },
 ];
 
 @NgModule({
