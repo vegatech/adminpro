@@ -8,10 +8,29 @@
               <div class="progress m-t-20">
                 <div class="progress-bar bg-primary progress-bar-striped active"
                 style=" height:15px;"
-                [style.width]="getporcentaje"
+                [style.width]="getporcentaje1"
                 role="progressbar">
-                {{progreso}}%
-                </div>
+                <!-- {{progreso}}% -->
+              </div>
+              </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-12">
+      <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Striped Progress bar </h4>
+              <div class="progress m-t-20">
+                <div class="progress-bar bg-success progress-bar-striped active"
+                style=" height:15px;"
+                role="progressbar"
+                [style.width]="getporcentaje2">
+
+
+              </div>
               </div>
       </div>
   </div>
@@ -21,23 +40,7 @@
   <div class="col-6">
       <div class="card">
           <div class="card-body">
-            <div class="input-group">
-              <span class="input-group-btn">
-                <button class="btn btn-primary"
-                (click)="cambiarValor(-5)"
-                type="button">
-                  <i class="fa fa-minus"></i>
-                </button>
-              </span>
-              <input type="number" class="form-control" [(ngModel)]="progreso" placeholder="Product name">
-              <span class="input-group-btn">
-              <button class="btn btn-primary"
-              (click)="cambiarValor(+5)"
-              type="button">
-                <i class="fa fa-plus"></i>
-              </button>
-              </span>
-          </div>
+              <app-incrementador (valorSalida)="progreso1 = $event" [valor]="progreso1"></app-incrementador>
             <p>1</p>
           </div>
       </div>
@@ -45,7 +48,7 @@
   <div class="col-6">
     <div class="card">
         <div class="card-body">
-          <p>2</p>
+          <app-incrementador (valorSalida)="progreso2 = $event" [valor]="progreso2"></app-incrementador>
         </div>
     </div>
 </div>
